@@ -1,0 +1,769 @@
+{
+  "meetings": [
+    {
+      "id": "d66ded72-5d67-45a7-8c04-d245db7cb344",
+      "title": "product 5",
+      "meetingUrl": "https://meet.google.com/gyq-gkhq-aoi",
+      "platform": "google_meet",
+      "passcode": "",
+      "scheduledTime": "2026-10-06T17:56:58.108Z",
+      "status": "completed",
+      "personaId": "default-persona-1",
+      "personaName": "Eulr Cloud Bot (Peter Solimine)",
+      "logs": [
+        "Meeting scheduled for 2026-10-06T17:56:58.108Z",
+        "[11:26:58 pm] Dispatching bot persona \"Eulr Cloud Bot (Peter Solimine)\" to platform: GOOGLE_MEET",
+        "[11:26:58 pm] Initializing headless Chromium for Google Meet...",
+        "[11:26:59 pm] Navigating to Google Meet URL: https://meet.google.com/gyq-gkhq-aoi",
+        "[11:27:04 pm] Captured diagnostic screenshot -> /meet_prejoin.png",
+        "[11:27:05 pm] Notice: Display name input not visible (browser may already have session state or pre-join layout differs).",
+        "[11:27:05 pm] Searching for Google Meet Join button...",
+        "[11:27:41 pm] Attempting generic Enter key press on pre-join screen...",
+        "[11:28:00 pm] Captured post-join screenshot -> /meet_joined.png",
+        "[11:28:00 pm] Virtual persona \"Eulr Cloud Bot (Peter Solimine)\" has submitted join request. (Note: Google Meet host must click \"Admit\" on their screen if waiting room is enabled).",
+        "[11:28:00 pm] Bot successfully entered meeting room.",
+        "[11:28:00 pm] Started audio/video capture stream.",
+        "[11:28:16 pm] Meeting session ended. Running AI transcription & summarization pipeline...",
+        "[11:28:34 pm] AI processing complete. Status set to completed."
+      ],
+      "createdAt": "2026-10-06T17:56:58.157Z",
+      "updatedAt": "2026-10-06T17:58:34.113Z",
+      "transcript": [
+        {
+          "id": "t-1",
+          "speaker": "Eulr Cloud Bot (Peter Solimine)",
+          "timestamp": "00:02",
+          "text": "Hello everyone, this is Eulr Cloud Bot (Peter Solimine) joining via Google Meet on behalf of our team."
+        },
+        {
+          "id": "t-2",
+          "speaker": "Meeting Host",
+          "timestamp": "00:15",
+          "text": "Great to have you here! Let's review the main agenda items for today's cloud bot integration strategy."
+        },
+        {
+          "id": "t-3",
+          "speaker": "Product Manager",
+          "timestamp": "00:45",
+          "text": "We need to ensure the Playwright headless browser runners can bypass waiting rooms automatically and stream high quality 720p virtual webcam video."
+        },
+        {
+          "id": "t-4",
+          "speaker": "Eulr Cloud Bot (Peter Solimine)",
+          "timestamp": "01:20",
+          "text": "Understood. The Eulr engine uses Chromium flags with synthetic stream injection and isolated container execution."
+        },
+        {
+          "id": "t-5",
+          "speaker": "Lead Architect",
+          "timestamp": "02:05",
+          "text": "Perfect. I will finalize the AWS ECS task definitions by Friday, and we can test real-time Whisper transcription next week."
+        }
+      ],
+      "summary": {
+        "executiveSummary": "The meeting focused on deploying the Eulr cloud meeting bot system across Zoom, Google Meet, and MS Teams. Key discussions covered Playwright WebRTC stream injection, waiting room bypasses, and automated AI audio transcription.",
+        "keyDecisions": [
+          "Utilize headless Chromium container pools with custom WebRTC media injection flags",
+          "Integrate Whisper API and LLM summarization pipeline for post-meeting analysis",
+          "Support multi-platform join links with automatic format transformation"
+        ],
+        "actionItems": [
+          {
+            "id": "act-1791309514111-1",
+            "task": "Finalize AWS ECS Docker container deployment task definitions",
+            "assignee": "Lead Architect",
+            "priority": "high",
+            "completed": false
+          },
+          {
+            "id": "act-1791309514113-2",
+            "task": "Benchmark low-latency live audio streaming for Whisper transcription",
+            "assignee": "Engineering Team",
+            "priority": "medium",
+            "completed": false
+          },
+          {
+            "id": "act-1791309514113-3",
+            "task": "Verify custom virtual avatar MP4 loop playback on Google Meet",
+            "assignee": "Product Manager",
+            "priority": "low",
+            "completed": true
+          }
+        ],
+        "topics": [
+          {
+            "title": "Introduction & Bot Persona Welcome",
+            "description": "Eulr meeting bot joined the call under user identity and established audio connection.",
+            "timeOffset": "00:02"
+          },
+          {
+            "title": "Cloud Infrastructure & Chromium Flags",
+            "description": "Technical evaluation of headless browser flags for fake device capture and stealth mode.",
+            "timeOffset": "00:45"
+          },
+          {
+            "title": "AI Pipeline & Next Steps",
+            "description": "Agreement on deployment roadmap, Whisper transcription, and weekly progress sync.",
+            "timeOffset": "02:05"
+          }
+        ],
+        "sentiment": "positive"
+      },
+      "recordingUrl": "/recordings/sample_meeting_d66ded72-5d67-45a7-8c04-d245db7cb344.mp4"
+    },
+    {
+      "id": "f421cb3d-9bb9-4de9-b12b-fdd4dbcb95d1",
+      "title": "procuct 4",
+      "meetingUrl": "https://meet.google.com/gyq-gkhq-aoi",
+      "platform": "google_meet",
+      "passcode": "",
+      "scheduledTime": "2026-10-06T17:47:04.631Z",
+      "status": "completed",
+      "personaId": "default-persona-1",
+      "personaName": "Eulr Cloud Bot (Peter Solimine)",
+      "logs": [
+        "Meeting scheduled for 2026-10-06T17:47:04.631Z",
+        "[11:17:04 pm] Dispatching bot persona \"Eulr Cloud Bot (Peter Solimine)\" to platform: GOOGLE_MEET",
+        "[11:17:04 pm] Initializing headless Chromium for Google Meet...",
+        "[11:17:06 pm] Navigating to Google Meet URL: https://meet.google.com/gyq-gkhq-aoi",
+        "[11:17:10 pm] Searching for Join button...",
+        "[11:17:35 pm] Attempting generic button click for Google Meet pre-join screen...",
+        "[11:17:35 pm] Successfully submitted join request. Bot is now active in meeting room / waiting for host admission.",
+        "[11:17:35 pm] Bot successfully entered meeting room.",
+        "[11:17:35 pm] Started audio/video capture stream.",
+        "[11:17:50 pm] Meeting session ended. Running AI transcription & summarization pipeline...",
+        "[11:17:51 pm] AI processing complete. Status set to completed."
+      ],
+      "createdAt": "2026-10-06T17:47:04.657Z",
+      "updatedAt": "2026-10-06T17:47:51.428Z",
+      "transcript": [
+        {
+          "id": "t-1",
+          "speaker": "Eulr Cloud Bot (Peter Solimine)",
+          "timestamp": "00:02",
+          "text": "Hello everyone, this is Eulr Cloud Bot (Peter Solimine) joining via Google Meet on behalf of our team."
+        },
+        {
+          "id": "t-2",
+          "speaker": "Meeting Host",
+          "timestamp": "00:15",
+          "text": "Great to have you here! Let's review the main agenda items for today's cloud bot integration strategy."
+        },
+        {
+          "id": "t-3",
+          "speaker": "Product Manager",
+          "timestamp": "00:45",
+          "text": "We need to ensure the Playwright headless browser runners can bypass waiting rooms automatically and stream high quality 720p virtual webcam video."
+        },
+        {
+          "id": "t-4",
+          "speaker": "Eulr Cloud Bot (Peter Solimine)",
+          "timestamp": "01:20",
+          "text": "Understood. The Eulr engine uses Chromium flags with synthetic stream injection and isolated container execution."
+        },
+        {
+          "id": "t-5",
+          "speaker": "Lead Architect",
+          "timestamp": "02:05",
+          "text": "Perfect. I will finalize the AWS ECS task definitions by Friday, and we can test real-time Whisper transcription next week."
+        }
+      ],
+      "summary": {
+        "executiveSummary": "The meeting focused on deploying the Eulr cloud meeting bot system across Zoom, Google Meet, and MS Teams. Key discussions covered Playwright WebRTC stream injection, waiting room bypasses, and automated AI audio transcription.",
+        "keyDecisions": [
+          "Utilize headless Chromium container pools with custom WebRTC media injection flags",
+          "Integrate Whisper API and LLM summarization pipeline for post-meeting analysis",
+          "Support multi-platform join links with automatic format transformation"
+        ],
+        "actionItems": [
+          {
+            "id": "act-1791308871427-1",
+            "task": "Finalize AWS ECS Docker container deployment task definitions",
+            "assignee": "Lead Architect",
+            "priority": "high",
+            "completed": false
+          },
+          {
+            "id": "act-1791308871428-2",
+            "task": "Benchmark low-latency live audio streaming for Whisper transcription",
+            "assignee": "Engineering Team",
+            "priority": "medium",
+            "completed": false
+          },
+          {
+            "id": "act-1791308871428-3",
+            "task": "Verify custom virtual avatar MP4 loop playback on Google Meet",
+            "assignee": "Product Manager",
+            "priority": "low",
+            "completed": true
+          }
+        ],
+        "topics": [
+          {
+            "title": "Introduction & Bot Persona Welcome",
+            "description": "Eulr meeting bot joined the call under user identity and established audio connection.",
+            "timeOffset": "00:02"
+          },
+          {
+            "title": "Cloud Infrastructure & Chromium Flags",
+            "description": "Technical evaluation of headless browser flags for fake device capture and stealth mode.",
+            "timeOffset": "00:45"
+          },
+          {
+            "title": "AI Pipeline & Next Steps",
+            "description": "Agreement on deployment roadmap, Whisper transcription, and weekly progress sync.",
+            "timeOffset": "02:05"
+          }
+        ],
+        "sentiment": "positive"
+      },
+      "recordingUrl": "/recordings/sample_meeting_f421cb3d-9bb9-4de9-b12b-fdd4dbcb95d1.mp4"
+    },
+    {
+      "id": "3553d6dc-4b67-4a3a-8644-978a2fcbe2e3",
+      "title": "product 3",
+      "meetingUrl": "https://meet.google.com/gyq-gkhq-aoi",
+      "platform": "google_meet",
+      "passcode": "",
+      "scheduledTime": "2026-10-06T17:45:56.188Z",
+      "status": "completed",
+      "personaId": "default-persona-1",
+      "personaName": "Eulr Cloud Bot (Peter Solimine)",
+      "logs": [
+        "Meeting scheduled for 2026-10-06T17:45:56.188Z",
+        "[11:15:56 pm] Dispatching bot persona \"Eulr Cloud Bot (Peter Solimine)\" to platform: GOOGLE_MEET",
+        "[11:15:56 pm] Initializing headless Chromium for Google Meet...",
+        "[11:15:57 pm] Navigating to Google Meet URL: https://meet.google.com/gyq-gkhq-aoi",
+        "[11:16:02 pm] Entering display name: \"Eulr Cloud Bot (Peter Solimine)\"",
+        "[11:16:02 pm] Searching for Join button...",
+        "[11:16:02 pm] Clicking join button: button:has-text(\"Ask to join\")",
+        "[11:16:03 pm] Successfully submitted join request. Bot is now active in meeting room / waiting for host admission.",
+        "[11:16:03 pm] Bot successfully entered meeting room.",
+        "[11:16:03 pm] Started audio/video capture stream.",
+        "[11:16:18 pm] Meeting session ended. Running AI transcription & summarization pipeline...",
+        "[11:16:19 pm] AI processing complete. Status set to completed."
+      ],
+      "createdAt": "2026-10-06T17:45:56.224Z",
+      "updatedAt": "2026-10-06T17:46:19.779Z",
+      "transcript": [
+        {
+          "id": "t-1",
+          "speaker": "Eulr Cloud Bot (Peter Solimine)",
+          "timestamp": "00:02",
+          "text": "Hello everyone, this is Eulr Cloud Bot (Peter Solimine) joining via Google Meet on behalf of our team."
+        },
+        {
+          "id": "t-2",
+          "speaker": "Meeting Host",
+          "timestamp": "00:15",
+          "text": "Great to have you here! Let's review the main agenda items for today's cloud bot integration strategy."
+        },
+        {
+          "id": "t-3",
+          "speaker": "Product Manager",
+          "timestamp": "00:45",
+          "text": "We need to ensure the Playwright headless browser runners can bypass waiting rooms automatically and stream high quality 720p virtual webcam video."
+        },
+        {
+          "id": "t-4",
+          "speaker": "Eulr Cloud Bot (Peter Solimine)",
+          "timestamp": "01:20",
+          "text": "Understood. The Eulr engine uses Chromium flags with synthetic stream injection and isolated container execution."
+        },
+        {
+          "id": "t-5",
+          "speaker": "Lead Architect",
+          "timestamp": "02:05",
+          "text": "Perfect. I will finalize the AWS ECS task definitions by Friday, and we can test real-time Whisper transcription next week."
+        }
+      ],
+      "summary": {
+        "executiveSummary": "The meeting focused on deploying the Eulr cloud meeting bot system across Zoom, Google Meet, and MS Teams. Key discussions covered Playwright WebRTC stream injection, waiting room bypasses, and automated AI audio transcription.",
+        "keyDecisions": [
+          "Utilize headless Chromium container pools with custom WebRTC media injection flags",
+          "Integrate Whisper API and LLM summarization pipeline for post-meeting analysis",
+          "Support multi-platform join links with automatic format transformation"
+        ],
+        "actionItems": [
+          {
+            "id": "act-1791308779779-1",
+            "task": "Finalize AWS ECS Docker container deployment task definitions",
+            "assignee": "Lead Architect",
+            "priority": "high",
+            "completed": false
+          },
+          {
+            "id": "act-1791308779779-2",
+            "task": "Benchmark low-latency live audio streaming for Whisper transcription",
+            "assignee": "Engineering Team",
+            "priority": "medium",
+            "completed": false
+          },
+          {
+            "id": "act-1791308779779-3",
+            "task": "Verify custom virtual avatar MP4 loop playback on Google Meet",
+            "assignee": "Product Manager",
+            "priority": "low",
+            "completed": true
+          }
+        ],
+        "topics": [
+          {
+            "title": "Introduction & Bot Persona Welcome",
+            "description": "Eulr meeting bot joined the call under user identity and established audio connection.",
+            "timeOffset": "00:02"
+          },
+          {
+            "title": "Cloud Infrastructure & Chromium Flags",
+            "description": "Technical evaluation of headless browser flags for fake device capture and stealth mode.",
+            "timeOffset": "00:45"
+          },
+          {
+            "title": "AI Pipeline & Next Steps",
+            "description": "Agreement on deployment roadmap, Whisper transcription, and weekly progress sync.",
+            "timeOffset": "02:05"
+          }
+        ],
+        "sentiment": "positive"
+      },
+      "recordingUrl": "/recordings/sample_meeting_3553d6dc-4b67-4a3a-8644-978a2fcbe2e3.mp4"
+    },
+    {
+      "id": "8fa6f662-9778-488e-bb4e-f21e1168b2a8",
+      "title": "product 2",
+      "meetingUrl": "https://meet.google.com/xpu-syrb-yfz",
+      "platform": "google_meet",
+      "passcode": "",
+      "scheduledTime": "2026-10-06T16:46:49.808Z",
+      "status": "completed",
+      "personaId": "default-persona-1",
+      "personaName": "Eulr Cloud Bot (Peter Solimine)",
+      "logs": [
+        "Meeting scheduled for 2026-10-06T16:46:49.808Z",
+        "[10:16:49 pm] Dispatching bot persona \"Eulr Cloud Bot (Peter Solimine)\" to platform: GOOGLE_MEET",
+        "[10:16:49 pm] Initializing headless Chromium for Google Meet...",
+        "[10:16:50 pm] Navigating to Google Meet URL: https://meet.google.com/xpu-syrb-yfz",
+        "[10:16:57 pm] Searching for Join button...",
+        "[10:17:22 pm] Attempting generic button click for Google Meet pre-join screen...",
+        "[10:17:22 pm] Successfully submitted join request. Bot is now active in meeting room / waiting for host admission.",
+        "[10:17:22 pm] Bot successfully entered meeting room.",
+        "[10:17:22 pm] Started audio/video capture stream.",
+        "[10:17:37 pm] Meeting session ended. Running AI transcription & summarization pipeline...",
+        "[10:17:38 pm] AI processing complete. Status set to completed."
+      ],
+      "createdAt": "2026-10-06T16:46:49.833Z",
+      "updatedAt": "2026-10-06T16:47:38.102Z",
+      "transcript": [
+        {
+          "id": "t-1",
+          "speaker": "Eulr Cloud Bot (Peter Solimine)",
+          "timestamp": "00:02",
+          "text": "Hello everyone, this is Eulr Cloud Bot (Peter Solimine) joining via Google Meet on behalf of our team."
+        },
+        {
+          "id": "t-2",
+          "speaker": "Meeting Host",
+          "timestamp": "00:15",
+          "text": "Great to have you here! Let's review the main agenda items for today's cloud bot integration strategy."
+        },
+        {
+          "id": "t-3",
+          "speaker": "Product Manager",
+          "timestamp": "00:45",
+          "text": "We need to ensure the Playwright headless browser runners can bypass waiting rooms automatically and stream high quality 720p virtual webcam video."
+        },
+        {
+          "id": "t-4",
+          "speaker": "Eulr Cloud Bot (Peter Solimine)",
+          "timestamp": "01:20",
+          "text": "Understood. The Eulr engine uses Chromium flags with synthetic stream injection and isolated container execution."
+        },
+        {
+          "id": "t-5",
+          "speaker": "Lead Architect",
+          "timestamp": "02:05",
+          "text": "Perfect. I will finalize the AWS ECS task definitions by Friday, and we can test real-time Whisper transcription next week."
+        }
+      ],
+      "summary": {
+        "executiveSummary": "The meeting focused on deploying the Eulr cloud meeting bot system across Zoom, Google Meet, and MS Teams. Key discussions covered Playwright WebRTC stream injection, waiting room bypasses, and automated AI audio transcription.",
+        "keyDecisions": [
+          "Utilize headless Chromium container pools with custom WebRTC media injection flags",
+          "Integrate Whisper API and LLM summarization pipeline for post-meeting analysis",
+          "Support multi-platform join links with automatic format transformation"
+        ],
+        "actionItems": [
+          {
+            "id": "act-1791305258101-1",
+            "task": "Finalize AWS ECS Docker container deployment task definitions",
+            "assignee": "Lead Architect",
+            "priority": "high",
+            "completed": false
+          },
+          {
+            "id": "act-1791305258102-2",
+            "task": "Benchmark low-latency live audio streaming for Whisper transcription",
+            "assignee": "Engineering Team",
+            "priority": "medium",
+            "completed": false
+          },
+          {
+            "id": "act-1791305258102-3",
+            "task": "Verify custom virtual avatar MP4 loop playback on Google Meet",
+            "assignee": "Product Manager",
+            "priority": "low",
+            "completed": true
+          }
+        ],
+        "topics": [
+          {
+            "title": "Introduction & Bot Persona Welcome",
+            "description": "Eulr meeting bot joined the call under user identity and established audio connection.",
+            "timeOffset": "00:02"
+          },
+          {
+            "title": "Cloud Infrastructure & Chromium Flags",
+            "description": "Technical evaluation of headless browser flags for fake device capture and stealth mode.",
+            "timeOffset": "00:45"
+          },
+          {
+            "title": "AI Pipeline & Next Steps",
+            "description": "Agreement on deployment roadmap, Whisper transcription, and weekly progress sync.",
+            "timeOffset": "02:05"
+          }
+        ],
+        "sentiment": "positive"
+      },
+      "recordingUrl": "/recordings/sample_meeting_8fa6f662-9778-488e-bb4e-f21e1168b2a8.mp4"
+    },
+    {
+      "id": "6e0a5a8c-5ff7-4f25-9957-d563d31be586",
+      "title": "product",
+      "meetingUrl": "https://meet.google.com/xpu-syrb-yfz",
+      "platform": "google_meet",
+      "passcode": "",
+      "scheduledTime": "2026-10-06T16:45:18.774Z",
+      "status": "completed",
+      "personaId": "default-persona-1",
+      "personaName": "Eulr Cloud Bot (Peter Solimine)",
+      "logs": [
+        "Meeting scheduled for 2026-10-06T16:45:18.774Z",
+        "[10:15:18 pm] Dispatching bot persona \"Eulr Cloud Bot (Peter Solimine)\" to platform: GOOGLE_MEET",
+        "[10:15:18 pm] Initializing headless Chromium for Google Meet...",
+        "[10:15:19 pm] Navigating to Google Meet URL: https://meet.google.com/xpu-syrb-yfz",
+        "[10:15:25 pm] Entering display name: \"Eulr Cloud Bot (Peter Solimine)\"",
+        "[10:15:25 pm] Searching for Join button...",
+        "[10:15:26 pm] Clicking join button: button:has-text(\"Ask to join\")",
+        "[10:15:26 pm] Successfully submitted join request. Bot is now active in meeting room / waiting for host admission.",
+        "[10:15:26 pm] Bot successfully entered meeting room.",
+        "[10:15:26 pm] Started audio/video capture stream.",
+        "[10:15:41 pm] Meeting session ended. Running AI transcription & summarization pipeline...",
+        "[10:15:41 pm] AI processing complete. Status set to completed."
+      ],
+      "createdAt": "2026-10-06T16:45:18.827Z",
+      "updatedAt": "2026-10-06T16:45:41.533Z",
+      "transcript": [
+        {
+          "id": "t-1",
+          "speaker": "Eulr Cloud Bot (Peter Solimine)",
+          "timestamp": "00:02",
+          "text": "Hello everyone, this is Eulr Cloud Bot (Peter Solimine) joining via Google Meet on behalf of our team."
+        },
+        {
+          "id": "t-2",
+          "speaker": "Meeting Host",
+          "timestamp": "00:15",
+          "text": "Great to have you here! Let's review the main agenda items for today's cloud bot integration strategy."
+        },
+        {
+          "id": "t-3",
+          "speaker": "Product Manager",
+          "timestamp": "00:45",
+          "text": "We need to ensure the Playwright headless browser runners can bypass waiting rooms automatically and stream high quality 720p virtual webcam video."
+        },
+        {
+          "id": "t-4",
+          "speaker": "Eulr Cloud Bot (Peter Solimine)",
+          "timestamp": "01:20",
+          "text": "Understood. The Eulr engine uses Chromium flags with synthetic stream injection and isolated container execution."
+        },
+        {
+          "id": "t-5",
+          "speaker": "Lead Architect",
+          "timestamp": "02:05",
+          "text": "Perfect. I will finalize the AWS ECS task definitions by Friday, and we can test real-time Whisper transcription next week."
+        }
+      ],
+      "summary": {
+        "executiveSummary": "The meeting focused on deploying the Eulr cloud meeting bot system across Zoom, Google Meet, and MS Teams. Key discussions covered Playwright WebRTC stream injection, waiting room bypasses, and automated AI audio transcription.",
+        "keyDecisions": [
+          "Utilize headless Chromium container pools with custom WebRTC media injection flags",
+          "Integrate Whisper API and LLM summarization pipeline for post-meeting analysis",
+          "Support multi-platform join links with automatic format transformation"
+        ],
+        "actionItems": [
+          {
+            "id": "act-1791305141533-1",
+            "task": "Finalize AWS ECS Docker container deployment task definitions",
+            "assignee": "Lead Architect",
+            "priority": "high",
+            "completed": false
+          },
+          {
+            "id": "act-1791305141533-2",
+            "task": "Benchmark low-latency live audio streaming for Whisper transcription",
+            "assignee": "Engineering Team",
+            "priority": "medium",
+            "completed": false
+          },
+          {
+            "id": "act-1791305141533-3",
+            "task": "Verify custom virtual avatar MP4 loop playback on Google Meet",
+            "assignee": "Product Manager",
+            "priority": "low",
+            "completed": true
+          }
+        ],
+        "topics": [
+          {
+            "title": "Introduction & Bot Persona Welcome",
+            "description": "Eulr meeting bot joined the call under user identity and established audio connection.",
+            "timeOffset": "00:02"
+          },
+          {
+            "title": "Cloud Infrastructure & Chromium Flags",
+            "description": "Technical evaluation of headless browser flags for fake device capture and stealth mode.",
+            "timeOffset": "00:45"
+          },
+          {
+            "title": "AI Pipeline & Next Steps",
+            "description": "Agreement on deployment roadmap, Whisper transcription, and weekly progress sync.",
+            "timeOffset": "02:05"
+          }
+        ],
+        "sentiment": "positive"
+      },
+      "recordingUrl": "/recordings/sample_meeting_6e0a5a8c-5ff7-4f25-9957-d563d31be586.mp4"
+    },
+    {
+      "id": "6c2b57ef-0c33-4407-b56f-f746b7192357",
+      "title": "prduct demo",
+      "meetingUrl": "https://meet.google.com/avi-phaf-jti",
+      "platform": "google_meet",
+      "passcode": "",
+      "scheduledTime": "2026-10-06T16:38:11.002Z",
+      "status": "completed",
+      "personaId": "default-persona-1",
+      "personaName": "Eulr Cloud Bot (Peter Solimine)",
+      "logs": [
+        "Meeting scheduled for 2026-10-06T16:38:11.002Z",
+        "[10:08:11 pm] Dispatching bot persona \"Eulr Cloud Bot (Peter Solimine)\" to platform: GOOGLE_MEET",
+        "[10:08:11 pm] Initializing headless Chromium for Google Meet...",
+        "[10:08:13 pm] Navigating to Google Meet URL: https://meet.google.com/avi-phaf-jti",
+        "[10:08:19 pm] Entering display name: \"Eulr Cloud Bot (Peter Solimine)\"",
+        "[10:08:20 pm] Searching for Join button...",
+        "[10:08:20 pm] Clicking join button: button:has-text(\"Ask to join\")",
+        "[10:08:20 pm] Successfully submitted join request. Bot is now active in meeting room / waiting for host admission.",
+        "[10:08:20 pm] Bot successfully entered meeting room.",
+        "[10:08:20 pm] Started audio/video capture stream.",
+        "[10:08:35 pm] Meeting session ended. Running AI transcription & summarization pipeline...",
+        "[10:08:35 pm] AI processing complete. Status set to completed."
+      ],
+      "createdAt": "2026-10-06T16:38:11.048Z",
+      "updatedAt": "2026-10-06T16:38:35.737Z",
+      "transcript": [
+        {
+          "id": "t-1",
+          "speaker": "Eulr Cloud Bot (Peter Solimine)",
+          "timestamp": "00:02",
+          "text": "Hello everyone, this is Eulr Cloud Bot (Peter Solimine) joining via Google Meet on behalf of our team."
+        },
+        {
+          "id": "t-2",
+          "speaker": "Meeting Host",
+          "timestamp": "00:15",
+          "text": "Great to have you here! Let's review the main agenda items for today's cloud bot integration strategy."
+        },
+        {
+          "id": "t-3",
+          "speaker": "Product Manager",
+          "timestamp": "00:45",
+          "text": "We need to ensure the Playwright headless browser runners can bypass waiting rooms automatically and stream high quality 720p virtual webcam video."
+        },
+        {
+          "id": "t-4",
+          "speaker": "Eulr Cloud Bot (Peter Solimine)",
+          "timestamp": "01:20",
+          "text": "Understood. The Eulr engine uses Chromium flags with synthetic stream injection and isolated container execution."
+        },
+        {
+          "id": "t-5",
+          "speaker": "Lead Architect",
+          "timestamp": "02:05",
+          "text": "Perfect. I will finalize the AWS ECS task definitions by Friday, and we can test real-time Whisper transcription next week."
+        }
+      ],
+      "summary": {
+        "executiveSummary": "The meeting focused on deploying the Eulr cloud meeting bot system across Zoom, Google Meet, and MS Teams. Key discussions covered Playwright WebRTC stream injection, waiting room bypasses, and automated AI audio transcription.",
+        "keyDecisions": [
+          "Utilize headless Chromium container pools with custom WebRTC media injection flags",
+          "Integrate Whisper API and LLM summarization pipeline for post-meeting analysis",
+          "Support multi-platform join links with automatic format transformation"
+        ],
+        "actionItems": [
+          {
+            "id": "act-1791304715737-1",
+            "task": "Finalize AWS ECS Docker container deployment task definitions",
+            "assignee": "Lead Architect",
+            "priority": "high",
+            "completed": false
+          },
+          {
+            "id": "act-1791304715737-2",
+            "task": "Benchmark low-latency live audio streaming for Whisper transcription",
+            "assignee": "Engineering Team",
+            "priority": "medium",
+            "completed": false
+          },
+          {
+            "id": "act-1791304715737-3",
+            "task": "Verify custom virtual avatar MP4 loop playback on Google Meet",
+            "assignee": "Product Manager",
+            "priority": "low",
+            "completed": true
+          }
+        ],
+        "topics": [
+          {
+            "title": "Introduction & Bot Persona Welcome",
+            "description": "Eulr meeting bot joined the call under user identity and established audio connection.",
+            "timeOffset": "00:02"
+          },
+          {
+            "title": "Cloud Infrastructure & Chromium Flags",
+            "description": "Technical evaluation of headless browser flags for fake device capture and stealth mode.",
+            "timeOffset": "00:45"
+          },
+          {
+            "title": "AI Pipeline & Next Steps",
+            "description": "Agreement on deployment roadmap, Whisper transcription, and weekly progress sync.",
+            "timeOffset": "02:05"
+          }
+        ],
+        "sentiment": "positive"
+      },
+      "recordingUrl": "/recordings/sample_meeting_6c2b57ef-0c33-4407-b56f-f746b7192357.mp4"
+    },
+    {
+      "id": "sample-meeting-1",
+      "title": "Shark Tank Pitch & Strategy Sync",
+      "meetingUrl": "https://zoom.us/j/9876543210",
+      "platform": "zoom",
+      "passcode": "123456",
+      "scheduledTime": "2026-10-02T18:01:10.597Z",
+      "durationMinutes": 25,
+      "status": "completed",
+      "personaId": "default-persona-1",
+      "personaName": "Eulr Cloud Bot (Peter Solimine)",
+      "logs": [
+        "00:00 - Dispatched Playwright bot engine",
+        "00:02 - Navigated to Zoom Web Client",
+        "00:05 - Joined meeting as \"Eulr Cloud Bot (Peter Solimine)\"",
+        "00:06 - Media recorder started",
+        "00:25 - Host ended meeting. Saved raw audio recording.",
+        "00:26 - AI Transcription & Summarization pipeline finished."
+      ],
+      "transcript": [
+        {
+          "id": "1",
+          "speaker": "Peter Solimine (Bot)",
+          "timestamp": "00:05",
+          "text": "Hello everyone! I am Peter's Eulr bot joining to record and take notes today."
+        },
+        {
+          "id": "2",
+          "speaker": "Investor Mark",
+          "timestamp": "00:15",
+          "text": "Welcome Peter! Tell us how Eulr manages cloud video playback and automated attendance."
+        },
+        {
+          "id": "3",
+          "speaker": "Peter Solimine (Bot)",
+          "timestamp": "00:30",
+          "text": "Eulr runs isolated Chromium containers on cloud workers, injecting synthetic audio/video pipes directly into WebRTC."
+        },
+        {
+          "id": "4",
+          "speaker": "Investor Lori",
+          "timestamp": "01:10",
+          "text": "That is impressive! Let's follow up on the partnership roadmap next Tuesday."
+        }
+      ],
+      "summary": {
+        "executiveSummary": "Discussion centered around Eulr's cloud architecture for WebRTC virtual attendance and upcoming investor strategy.",
+        "keyDecisions": [
+          "Deploy isolated Docker workers for low-latency browser streaming",
+          "Integrate live Whisper transcript stream with action item detection"
+        ],
+        "actionItems": [
+          {
+            "id": "act-1",
+            "task": "Send partnership proposal draft to Lori",
+            "assignee": "Peter Solimine",
+            "priority": "high",
+            "completed": false
+          },
+          {
+            "id": "act-2",
+            "task": "Bench-test Google Meet waiting room auto-bypass",
+            "assignee": "Engineering Team",
+            "priority": "medium",
+            "completed": true
+          }
+        ],
+        "topics": [
+          {
+            "title": "Intro & Bot Capabilities",
+            "description": "Eulr bot greeted participants and demonstrated real-time stream injection.",
+            "timeOffset": "00:05"
+          },
+          {
+            "title": "Technical Deep Dive",
+            "description": "Explanation of headless browser WebRTC pipelines and Zoom Web client auto-join.",
+            "timeOffset": "00:30"
+          }
+        ],
+        "sentiment": "positive"
+      },
+      "createdAt": "2026-10-02T17:01:10.597Z",
+      "updatedAt": "2026-10-02T18:01:10.597Z"
+    }
+  ],
+  "personas": [
+    {
+      "id": "default-persona-1",
+      "name": "Eulr Cloud Bot (Peter Solimine)",
+      "email": "peter@eulr.ai",
+      "muteOnJoin": false,
+      "hideVideoOnJoin": false,
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop",
+      "videoFeedUrl": "sample-loop.mp4"
+    },
+    {
+      "id": "default-persona-2",
+      "name": "Executive Scribe Bot",
+      "email": "scribe@eulr.ai",
+      "muteOnJoin": true,
+      "hideVideoOnJoin": true
+    },
+    {
+      "name": "Rishav",
+      "email": "rishav@company.com",
+      "videoFeedUrl": "",
+      "audioFeedUrl": "",
+      "muteOnJoin": false,
+      "hideVideoOnJoin": false,
+      "id": "d30803a9-549d-4fa2-b69c-4b930dd2520f"
+    }
+  ]
+}

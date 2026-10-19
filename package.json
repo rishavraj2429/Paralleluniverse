@@ -1,0 +1,46 @@
+{
+  "name": "eulr-meeting-bot",
+  "version": "1.0.0",
+  "description": "Autonomous Cloud Meeting Bot Platform for Zoom, Google Meet & MS Teams",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start -H 0.0.0.0",
+    "tunnel": "npx localtunnel --port 3000",
+    "lint": "next lint",
+    "bot:test": "ts-node src/bot-engine/test-runner.ts",
+    "install:playwright": "npx playwright install chromium"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.13.0",
+    "clsx": "^2.1.1",
+    "dotenv": "^16.4.5",
+    "form-data": "^4.0.1",
+    "framer-motion": "^11.11.10",
+    "lucide-react": "^0.453.0",
+    "next": "^14.2.15",
+    "node-cron": "^3.0.3",
+    "playwright": "^1.48.1",
+    "playwright-core": "^1.48.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-redux": "^9.3.0",
+    "tailwind-merge": "^2.5.4",
+    "uuid": "^10.0.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "@types/node-cron": "^3.0.11",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "@types/uuid": "^10.0.0",
+    "@types/ws": "^8.5.13",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}

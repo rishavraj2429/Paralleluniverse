@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  eulr-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: eulr-meeting-bot
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - HEADLESS=true
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    volumes:
+      - ./data:/app/data
+      - ./public/recordings:/app/public/recordings
+    restart: unless-stopped

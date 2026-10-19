@@ -1,0 +1,82 @@
+pipeline {
+    agent any
+
+    environment {
+        AWS_REGION = 'us-east-1'
+        ECR_REGISTRY = '123456789012.dkr.ecr.us-east-1.amazonaws.com'
+        EKS_CLUSTER_NAME = 'eulr-production-eks'
+        SONAR_HOST_URL = 'http://sonarqube.enterprise.internal:9000'
+    }
+
+    stages {
+        stage('Checkout & Lint') {
+            steps {
+                echo 'Checking out source from Bitbucket / Git repository...'
+                checkout scm
+            }
+        }
+
+        stage('Build & Test Spring Boot Core') {
+            steps {
+                dir('services/core-orchestrator') {
+                    echo 'Compiling Java 21 Spring Boot microservice...'
+                    sh 'mvn clean test -DskipTests=false'
+                }
+            }
+        }
+
+        stage('SonarQube Static Analysis & Security Gate') {
+            steps {
+                withSonarQubeEnv('SonarQubeServer') {
+                    dir('services/core-orchestrator') {
+                        sh 'mvn sonar:sonar -Dsonar.projectKey=eulr-core-orchestrator'
+                    }
+                }
+                timeout(time: 5, unit: 'MINUTES') {
+                    waitForQualityGate abortPipeline: true
+                }
+            }
+        }
+
+        stage('Container Image Build & Security Scan') {
+            steps {
+                echo 'Building Docker container images...'
+                sh 'docker build -t ${ECR_REGISTRY}/eulr-core:${BUILD_NUMBER} services/core-orchestrator/'
+                sh 'docker build -t ${ECR_REGISTRY}/eulr-ai-rag:${BUILD_NUMBER} services/ai-rag-service/'
+
+                echo 'Running Trivy container vulnerability scan...'
+                sh 'trivy image --exit-code 0 --severity HIGH,CRITICAL ${ECR_REGISTRY}/eulr-core:${BUILD_NUMBER}'
+            }
+        }
+
+        stage('Push to AWS ECR') {
+            steps {
+                sh '''
+                    aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${ECR_REGISTRY}
+                    docker push ${ECR_REGISTRY}/eulr-core:${BUILD_NUMBER}
+                    docker push ${ECR_REGISTRY}/eulr-ai-rag:${BUILD_NUMBER}
+                '''
+            }
+        }
+
+        stage('Deploy to AWS EKS Cluster') {
+            steps {
+                sh '''
+                    aws eks update-kubeconfig --region ${AWS_REGION} --name ${EKS_CLUSTER_NAME}
+                    kubectl apply -f infra/k8s/eks-deployment.yaml
+                    kubectl set image deployment/eulr-core-orchestrator spring-boot-app=${ECR_REGISTRY}/eulr-core:${BUILD_NUMBER} -n eulr-enterprise
+                    kubectl rollout status deployment/eulr-core-orchestrator -n eulr-enterprise
+                '''
+            }
+        }
+    }
+
+    post {
+        always {
+            cleanWs()
+        }
+        failure {
+            echo 'Pipeline failed. Sending JIRA alert and team notification...'
+        }
+    }
+}

@@ -1,0 +1,126 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: eulr-enterprise
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: eulr-workload-sa
+  namespace: eulr-enterprise
+  annotations:
+    # AWS IAM Role for Service Accounts (IRSA) with 20+ least-privilege IAM policies
+    eks.amazonaws.com/role-arn: arn:aws:iam::123456789012:role/EulrEKSWorkloadRole
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eulr-core-orchestrator
+  namespace: eulr-enterprise
+  labels:
+    app: eulr-core
+    tier: backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: eulr-core
+  template:
+    metadata:
+      labels:
+        app: eulr-core
+    spec:
+      serviceAccountName: eulr-workload-sa
+      containers:
+        - name: spring-boot-app
+          image: 123456789012.dkr.ecr.us-east-1.amazonaws.com/eulr-core:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          resources:
+            requests:
+              cpu: "500m"
+              memory: "1Gi"
+            limits:
+              cpu: "2000m"
+              memory: "4Gi"
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: "production"
+            - name: AWS_REGION
+              value: "us-east-1"
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+            initialDelaySeconds: 45
+            periodSeconds: 15
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+            initialDelaySeconds: 20
+            periodSeconds: 10
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eulr-ai-rag-service
+  namespace: eulr-enterprise
+  labels:
+    app: eulr-ai-rag
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: eulr-ai-rag
+  template:
+    metadata:
+      labels:
+        app: eulr-ai-rag
+    spec:
+      serviceAccountName: eulr-workload-sa
+      containers:
+        - name: langgraph-rag
+          image: 123456789012.dkr.ecr.us-east-1.amazonaws.com/eulr-ai-rag:latest
+          ports:
+            - containerPort: 8000
+          resources:
+            requests:
+              cpu: "1000m"
+              memory: "2Gi"
+            limits:
+              cpu: "4000m"
+              memory: "8Gi"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 20
+            periodSeconds: 10
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: eulr-core-service
+  namespace: eulr-enterprise
+spec:
+  type: ClusterIP
+  selector:
+    app: eulr-core
+  ports:
+    - port: 8080
+      targetPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: eulr-ai-rag-service
+  namespace: eulr-enterprise
+spec:
+  type: ClusterIP
+  selector:
+    app: eulr-ai-rag
+  ports:
+    - port: 8000
+      targetPort: 8000
